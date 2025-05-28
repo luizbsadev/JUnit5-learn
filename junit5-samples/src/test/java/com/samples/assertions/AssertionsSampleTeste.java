@@ -16,13 +16,13 @@ public class AssertionsSampleTeste {
 	 */
 	@Test
 	public void comuns() {
-		Assertions.assertEquals(6, Calculadora.somar(5, 1));
-		Assertions.assertNotEquals(5, Calculadora.somar(1,5));
+		Assertions.assertEquals(6, Calculadora.somarStatico(5, 1));
+		Assertions.assertNotEquals(5, Calculadora.somarStatico(1,5));
 		
-		Boolean bool1 = Calculadora.somar(1, 2) == 3;
+		Boolean bool1 = Calculadora.somarStatico(1, 2) == 3;
 		Assertions.assertTrue(bool1);
 		
-		Boolean bool2 = Calculadora.somar(1, 2) == 4;
+		Boolean bool2 = Calculadora.somarStatico(1, 2) == 4;
 		Assertions.assertFalse(bool2);
 		
 		Assertions.assertThrows(ArithmeticException.class, () -> Calculadora.dividir(0, 0));

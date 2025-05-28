@@ -1,8 +1,8 @@
 package com.domain;
 
-public abstract class Calculadora {
+public class Calculadora {
 	
-	public static int somar(int valor1, int valor2) {
+	public static int somarStatico(int valor1, int valor2) {
 		return valor1 + valor2;
 	}
 	
@@ -16,5 +16,8 @@ public abstract class Calculadora {
 	
 	public static int multiplicar(int valor1, int valor2) {
 		return valor1 * valor2;
+	}
+	public int somarNaoStatico(int valor1, int valor2) {
+		return valor1 + valor2;
 	}
 }
